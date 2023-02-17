@@ -3,7 +3,7 @@ import React from 'react'
 const Main = () => {
   return (
     <>
-       <div>
+       <div className='header'>
             <nav>
                 <ul>
                     <li><a href='#'>Popular</a></li>
@@ -11,9 +11,14 @@ const Main = () => {
                     <li><a href='#'>Kids</a></li>
                     <li><a href='#'>Drama</a></li>
                     <li><a href='#'>Comedy</a></li>
-
                 </ul>
             </nav>
+            <form>
+                <div>
+                    <input type='text' placeholder='Enter Movie Name' className='inputText' />
+                    <button type='submit'></button>
+                </div>
+            </form>
         </div> 
     </>
   )
