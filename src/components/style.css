@@ -13,5 +13,32 @@
   }
 
   body {
-    background-color: var(--primar-color)
+    background-color: var(--primar-color);
+  }
+
+  .header {
+    background-color: var(--secondary-color);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav ul li {
+    list-style: none;
+    margin-right: 1rem;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.2rem 0.6rem;
   }
