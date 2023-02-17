@@ -6,3 +6,12 @@
     margin: 0;
     font-family: 'Poppins', sans-serif; 
   }
+
+  :root {
+    --primar-color: #bf6f13;
+    --secondary-color: #e88e27;
+  }
+
+  body {
+    background-color: var(--primar-color)
+  }

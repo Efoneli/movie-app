@@ -1,9 +1,11 @@
+import React from 'react';
+import Main from "./components/Main";
 
 function App() {
   return (
-    <div className="bg-red-600 min-h-screen">
-      hhhhuhbh
-    </div>
+    <>
+      <Main />
+    </>
   );
 }
 

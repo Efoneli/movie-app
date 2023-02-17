@@ -16,7 +16,7 @@ const Main = () => {
             <form>
                 <div>
                     <input type='text' placeholder='Enter Movie Name' className='inputText' />
-                    <button type='submit'></button>
+                    <button type='submit'><i class='fas fa-search'></i></button>
                 </div>
             </form>
         </div> 
