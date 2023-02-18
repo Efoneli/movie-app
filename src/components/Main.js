@@ -16,7 +16,7 @@ const Main = () => {
                 </ul>
             </nav>
             <form>
-                <div>
+                <div className='search-btn'>
                     <input type='text' placeholder='Enter Movie Name' className='inputText' />
                     <button type='submit'><i class='fas fa-search'></i></button>
                 </div>
@@ -24,6 +24,11 @@ const Main = () => {
         </div> 
         <div className="container">
             <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+
         </div>
     </>
   )

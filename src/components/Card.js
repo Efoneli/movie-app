@@ -11,8 +11,8 @@ const Card = () => {
                 <p className='rating'>9.7</p>
               </div>
               <div className="overview">
-                <h1>Overview</h1>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi neque ab accusantium molestiae id odio, sequi deserunt magnam blanditiis rem ut vitae recusandae laboriosam quas reprehenderit earum. Reprehenderit aspernatur veritatis expedita eligendi ratione iusto magni, quasi nisi in, possimus, ea reiciendis quos eius. Doloremque aliquam minima repellat, deserunt corporis molestias.
+                <h1 className='font-bold text-2xl'>Overview</h1>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi neque ab accusantiu
               </div>
             </div>
         </div> 
