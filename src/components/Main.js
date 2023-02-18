@@ -71,7 +71,7 @@ const Main = () => {
         </div> 
         <div className="container">
             {
-                (movieData.length==0)?<p className='text-2xl font-bold'>Opps!!! Not found</p>: movieData.map((res,pos) => {
+                (movieData.length==0)?<p className='text-2xl font-bold text-red-900'>Opps!!! Not found☹️</p>: movieData.map((res,pos) => {
                     return (
                         <Card info={res} key={pos} />
                     )
