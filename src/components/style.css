@@ -8,12 +8,12 @@
   }
 
   :root {
-    --primar-color: #bf6f13;
+    --primary-color: #bf6f13;
     --secondary-color: #e88e27;
   }
 
   body {
-    background-color: var(--primar-color);
+    background-color: var(--primary-color);
   }
 
   .header {
@@ -41,4 +41,31 @@
     font-size: 1.2rem;
     font-weight: bold;
     padding: 0.2rem 0.6rem;
+    position: relative;
+  }
+
+  nav ul li a::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    height: 3px;
+    width: 0;
+    transform: translate(-50%);
+    background-color: var(--primary-color);
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav ul li a:hover:before {
+    width: 100%;
+  }
+
+  nav ul li a:focus {
+    background-color: var(--primary-color);
+    opacity: 0.2px;
+    border-radius: 20px;
+  }
+
+  nav ul li a:focus::before {
+    width: 0%;
   }
