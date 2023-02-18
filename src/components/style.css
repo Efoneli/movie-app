@@ -8,8 +8,9 @@
   }
 
   :root {
-    --primary-color: #bf6f13;
-    --secondary-color: #e88e27;
+    --primary-color: #170000;
+    --secondary-color: #350a06;
+    --tertiary-color: #cb7169;
   }
 
   body {
@@ -142,6 +143,11 @@
   .movie-details .title {
     width: 160px;
     text-align: center;
+    color: var(--tertiary-color);
+  }
+
+  .movie-details .release {
+    color: var(--tertiary-color);
   }
 
   .movie-details .overview {
@@ -164,7 +170,7 @@
   }
 
   .rating {
-    background-color: var(--primary-color);
+    background-color: var(--tertiary-color);
     width: 45px;
     height: 45px;
     border-radius: 50%;
