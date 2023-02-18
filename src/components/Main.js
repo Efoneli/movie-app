@@ -1,4 +1,5 @@
 import React from 'react'
+import Card from './Card'
 // import './style.css'
 
 const Main = () => {
@@ -22,7 +23,7 @@ const Main = () => {
             </form>
         </div> 
         <div className="container">
-            
+            <Card />
         </div>
     </>
   )
