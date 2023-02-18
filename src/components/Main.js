@@ -1,5 +1,5 @@
 import React from 'react'
-import './style.css'
+// import './style.css'
 
 const Main = () => {
   return (
@@ -21,6 +21,9 @@ const Main = () => {
                 </div>
             </form>
         </div> 
+        <div className="container">
+            
+        </div>
     </>
   )
 }
