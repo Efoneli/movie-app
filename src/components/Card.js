@@ -6,7 +6,7 @@ const Card = (movie) => {
   return (
     <>
       <div className="movie">
-        <img src={img_path + movie.info.poster_path} className="poster" />
+        <img src={img_path + movie.info.poster_path} alt='image' className="poster" />
         <div className="movie-details">
           <div className="box">
             <h4 className="title font-bold">{movie.info.title}</h4>
