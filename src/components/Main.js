@@ -1,35 +1,34 @@
 import { useState, useEffect } from "react";
 import Card from "./Card";
+import Navbar from "./Navbar";
 
 // import './style.css'
 let API_keys = "&api_key=1189e19e4888756b7edb9a1346371528";
 let base_url = "https://api.themoviedb.org/3";
 let url = base_url + "/discover/movie?sort_by=popularity.desc" + API_keys;
-let arr = ["Popular", "Theater", "Kids", "Drama", "Comedy"];
 
 const Main = () => {
   const [movieData, SetData] = useState([]);
   const [url_set, setUrl] = useState(url);
-  const [search, setSearch] = useState("");
-  const [scrolled, setScrolled] = useState(false);
+  // const [scrolled, setScrolled] = useState(false);
 
-  const handleScroll = () => {
-    const offset = window.scrollY;
-    if (offset > 200) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-  };
+  // const handleScroll = () => {
+  //   const offset = window.scrollY;
+  //   if (offset > 200) {
+  //     setScrolled(true);
+  //   } else {
+  //     setScrolled(false);
+  //   }
+  // };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-  });
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
+  // });
 
-  let navbarClasses = ["navbar"];
-  if (scrolled) {
-    navbarClasses.push("scrolled");
-  }
+  // let navbarClasses = ["navbar"];
+  // if (scrolled) {
+  //   navbarClasses.push("scrolled");
+  // }
 
   useEffect(() => {
     fetch(url_set)
@@ -84,47 +83,9 @@ const Main = () => {
   };
   return (
     <>
-      <div className={navbarClasses.join(" ")}>
-        <div className="header">
-          <img src="images/movie-icon.png" alt="logo" className="w-15 h-12 cursor-pointer" />
-          <nav>
-            <ul>
-              {arr.map((value) => {
-                return (
-                  <li>
-                    <a
-                      href="#"
-                      name={value}
-                      onClick={(e) => {
-                        getData(e.target.name);
-                      }}
-                    >
-                      {value}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
-          <form>
-            <div className="search-btn">
-              <input
-                type="text"
-                placeholder="Enter Movie Name"
-                className="inputText"
-                onChange={(e) => {
-                  setSearch(e.target.value);
-                }}
-                value={search}
-                onKeyPress={searchMovie}
-              />
-              <button type="submit">
-                <i class="fas fa-search"></i>
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
+      {/* <div className={navbarClasses.join(" ")}> */}
+       <Navbar />
+      {/* </div> */}
       <div className="container">
         {movieData.length == 0 ? (
           <p className="text-2xl font-bold text-red-900">Opps!!! Not found☹️</p>
