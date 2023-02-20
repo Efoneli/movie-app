@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import Card from "./Card";
 
 
-let API_keys = "&api_key=1189e19e4888756b7edb9a1346371528";
+// let API_keys = "&api_key=1189e19e4888756b7edb9a1346371528";
+let API_keys = `${process.env.REACT_APP_API_keys}`
 let base_url = "https://api.themoviedb.org/3";
 let url = base_url + "/discover/movie?sort_by=popularity.desc" + API_keys;
 let arr = ["Popular", "Theater", "Kids", "Drama", "Comedy"];
