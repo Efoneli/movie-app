@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import Card from "./Card";
 
-
 // let API_keys = "&api_key=1189e19e4888756b7edb9a1346371528";
-let API_keys = process.env.REACT_APP_API_keys
+let API_keys = process.env.REACT_APP_API_keys;
 let base_url = "https://api.themoviedb.org/3";
 let url = base_url + "/discover/movie?sort_by=popularity.desc" + API_keys;
 let arr = ["Popular", "Theater", "Kids", "Drama", "Comedy"];
@@ -14,7 +13,6 @@ const Main = () => {
   const [search, setSearch] = useState("");
   const [sticky, setSticky] = useState("");
   const [isNavOpen, setIsNavOpen] = useState(false);
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -79,38 +77,37 @@ const Main = () => {
   return (
     <>
       <div className={`${sticky ? "sticky" : ""}`}>
-      <section className="MOBILE-MENU flex lg:hidden">
-          <div className="HAMBURGER-ICON flex justify-around items-center m-5">
-          <div
-            className=" space-y-2 mr-6"
-             onClick={() => setIsNavOpen((prev) => !prev)}>
-        
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+        <section className=" MOBILE-MENU flex lg:hidden">
+          <div className=" HAMBURGER-ICON flex justify-around items-center m-5">
+            <div
+              className=" space-y-2 mr-6"
+              onClick={() => setIsNavOpen((prev) => !prev)}
+            >
+              <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+              <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+              <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
             </div>
 
             <form>
-            <div className="search-btn ml-10">
-              <input
-                type="text"
-                placeholder="Enter Movie Name"
-                className="inputText"
-                onChange={(e) => {
-                  setSearch(e.target.value);
-                }}
-                value={search}
-                onKeyPress={searchMovie}
-              />
-              <button type="submit">
-                <i class="fas fa-search"></i>
-              </button>
-            </div>
-          </form>
+              <div className="search-btn w-100%">
+                <input
+                  type="text"
+                  placeholder="Enter title"
+                  className="inputText text-sm"
+                  onChange={(e) => {
+                    setSearch(e.target.value);
+                  }}
+                  value={search}
+                  onKeyPress={searchMovie}
+                />
+                <button type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </form>
           </div>
 
-          <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}
-            >
+          <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
             <div
               className="absolute top-0 right-0 px-8 py-8"
               onClick={() => setIsNavOpen(false)}
@@ -148,7 +145,6 @@ const Main = () => {
           </div>
         </section>
         <div className="header sm:hidden">
-          
           <img
             src="images/movie-icon.png"
             alt="logo"
@@ -177,7 +173,7 @@ const Main = () => {
             <div className="search-btn">
               <input
                 type="text"
-                placeholder="Enter Movie Name"
+                placeholder="Enter title"
                 className="inputText"
                 onChange={(e) => {
                   setSearch(e.target.value);
