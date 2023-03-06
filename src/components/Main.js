@@ -76,6 +76,7 @@ const Main = () => {
   return (
     <>
       <div className={`${sticky ? "sticky" : ""}`}>
+        {/* nav bar for mobile screen */}
         <section className=" MOBILE-MENU flex lg:hidden">
           <div className=" HAMBURGER-ICON flex justify-around items-center m-5">
             <div
@@ -143,12 +144,15 @@ const Main = () => {
             </ul>
           </div>
         </section>
+        {/* nav bar for wide screen */}
         <div className="header sm:hidden">
+          {/* logo */}
           <img
             src="images/movie-icon.png"
             alt="logo"
             className="w-15 h-12 cursor-pointer"
           />
+          {/* nav list for wide screen */}
           <nav className="">
             <ul>
               {arr.map((value) => {
@@ -168,6 +172,7 @@ const Main = () => {
               })}
             </ul>
           </nav>
+          {/* search bar */}
           <form>
             <div className="search-btn">
               <input
@@ -187,9 +192,10 @@ const Main = () => {
           </form>
         </div>
       </div>
+      {/* main content */}
       <div className="container">
         {movieData.length === 0 ? (
-          <p className="text-2xl font-bold text-red-900">Opps!!! Not found☹️</p>
+          <p className="text-2xl font-bold text-red-900">Opps!!! Movie not found☹️</p>
         ) : (
           movieData.map((res, pos) => {
             return <Card info={res} key={pos} />;
